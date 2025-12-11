@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http.Json;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using Modules.Common.API.ErrorHandling;
 using Serilog;
 
@@ -30,21 +30,16 @@ public static class DependencyInjection
 		            Scheme = "Bearer"
 	            });
 
-	            options.AddSecurityRequirement(new OpenApiSecurityRequirement
-	            {
-		            {
-			            new OpenApiSecurityScheme
-			            {
-				            Reference = new OpenApiReference
-				            {
-					            Type=ReferenceType.SecurityScheme,
-					            Id="Bearer"
-				            }
-			            },
-			            Array.Empty<string>()
-		            }
-	            });
-            });
+				options.AddSecurityRequirement(_ =>
+					new OpenApiSecurityRequirement()
+					{
+								{
+									new OpenApiSecuritySchemeReference("Bearer"),
+									new List<string>()
+								}
+					}
+				);
+			});
 
         services
             .AddExceptionHandler<GlobalExceptionHandler>()
