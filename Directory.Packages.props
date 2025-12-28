@@ -26,7 +26,7 @@
     <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.12.0" />
     <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.12.0" />
     <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.12.0" />
-    <PackageVersion Include="Respawn" Version="6.2.1" />
+    <PackageVersion Include="Respawn" Version="7.0.0" />
     <PackageVersion Include="Roslynator.Analyzers" Version="4.14.0" />
     <PackageVersion Include="Serilog.AspNetCore" Version="9.0.0" />
     <PackageVersion Include="Serilog.Sinks.Console" Version="6.0.0" />
@@ -34,6 +34,7 @@
     <PackageVersion Include="SonarAnalyzer.CSharp" Version="10.15.0.120848" />
     <PackageVersion Include="Swashbuckle.AspNetCore" Version="9.0.3" />
     <PackageVersion Include="System.IdentityModel.Tokens.Jwt" Version="8.13.0" />
+    <PackageVersion Include="Microsoft.IdentityModel.Abstractions" Version="8.0.1" />
     <PackageVersion Include="coverlet.collector" Version="6.0.4" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
     <PackageVersion Include="Testcontainers" Version="4.6.0" />
